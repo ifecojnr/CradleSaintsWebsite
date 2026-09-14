@@ -243,68 +243,90 @@
         }
 
 
-        /* =========================
-           GALLERY
-        ========================= */
+/* =========================
+   GALLERY
+========================= */
 
-        .gallery {
-            padding: 80px 8%;
-            background: #f5f9fc;
-            text-align: center;
-        }
-
-        .gallery-intro {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-            width: 100%;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 14px;
-            background: white;
-            height: 300px;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-        }
-        .gallery-item h3 {
-    margin: 15px 18px 5px;
-    font-size: 18px;
+.gallery {
+    padding: 80px 8%;
+    background: #f5f9fc;
+    text-align: center;
 }
 
-.gallery-item p {
-    margin: 0 18px;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
+.gallery-intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+    line-height: 1.7;
 }
 
-.photo-placeholder {
-    height: 170px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    width: 100%;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-photo {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.gallery-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.gallery-item:hover .gallery-photo img {
+    transform: scale(1.05);
+}
+
+.gallery-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 55px;
-    background: #f2f7ff;
+    font-size: 27px;
+    margin: -29px auto 12px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-        .photo-placeholder {
-            width: 100%;
-            height: 100%;
-            background: #dfeaf2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #174a7c;
-            font-weight: bold;
-            font-size: 18px;
-        }
+
+.gallery-item h3 {
+    color: #174a7c;
+    font-size: 20px;
+    margin: 0 15px 10px;
+}
+
+.gallery-item p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 18px 25px;
+}
+    
 
 
         /* =========================
@@ -814,30 +836,100 @@ nav a {
     </p>
 
 
+   <div class="gallery-grid">
+
+    <!-- OUR SCHOOL -->
     <div class="gallery-item">
-    <div class="photo-placeholder">🏫</div>
-    <h3>Our School</h3>
-    <p>A welcoming environment for learning and growth.</p>
-</div>
 
-<div class="gallery-item">
-    <div class="photo-placeholder">📚</div>
-    <h3>Our Classrooms</h3>
-    <p>A comfortable environment for effective learning.</p>
-</div>
+        <div class="gallery-photo">
+            <img src="school.jpg" alt="Cradle Saints Nursery & Primary School">
+        </div>
 
-<div class="gallery-item">
-    <div class="photo-placeholder">👩‍🏫</div>
-    <h3>Learning Activities</h3>
-    <p>Helping children learn, explore and develop their abilities.</p>
-</div>
+        <div class="gallery-icon">
+            🏫
+        </div>
 
-<div class="gallery-item">
-    <div class="photo-placeholder">⚽</div>
-    <h3>School Activities</h3>
-    <p>Sports, excursions, clubs and activities beyond the classroom.</p>
-</div>
+        <h3>
+            Our School
+        </h3>
 
+        <p>
+            A welcoming and enabling environment where every child
+            can learn, grow and thrive.
+        </p>
+
+    </div>
+
+
+    <!-- OUR CLASSROOMS -->
+    <div class="gallery-item">
+
+        <div class="gallery-photo">
+            <img src="classroom.jpg" alt="Cradle Saints classroom">
+        </div>
+
+        <div class="gallery-icon">
+            📚
+        </div>
+
+        <h3>
+            Our Classrooms
+        </h3>
+
+        <p>
+            Comfortable learning spaces designed to support effective
+            learning and development.
+        </p>
+
+    </div>
+
+
+    <!-- LEARNING ACTIVITIES -->
+    <div class="gallery-item">
+
+        <div class="gallery-photo">
+            <img src="learning.jpg" alt="Learning activities at Cradle Saints">
+        </div>
+
+        <div class="gallery-icon">
+            💡
+        </div>
+
+        <h3>
+            Learning Activities
+        </h3>
+
+        <p>
+            Engaging activities that help children learn, explore
+            and develop their abilities.
+        </p>
+
+    </div>
+
+
+    <!-- SPORTS & ACTIVITIES -->
+    <div class="gallery-item">
+
+        <div class="gallery-photo">
+            <img src="sports.jpg" alt="Sports activities at Cradle Saints">
+        </div>
+
+        <div class="gallery-icon">
+            ⚽
+        </div>
+
+        <h3>
+            Sports & Activities
+        </h3>
+
+        <p>
+            Sports, excursions, clubs and activities that encourage
+            confidence, teamwork and creativity.
+        </p>
+
+    </div>
+
+</div>
 
 <!-- =========================
      WHY CHOOSE US
